@@ -1,11 +1,12 @@
 import Link from "next/link"
-import { Menu, Search, ShoppingCart } from "lucide-react"
+import { Menu, Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { MobileNav } from "@/components/mobile-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { DistrilunaLogo } from "@/components/distriluna-logo"
 
 export function SiteHeader() {
   return (
@@ -23,24 +24,27 @@ export function SiteHeader() {
           </SheetContent>
         </Sheet>
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <span className="text-xl font-bold">DISTRILUNA</span>
+          <DistrilunaLogo className="h-8 w-8" />
+          <span className="text-xl font-bold text-blue-600 dark:text-blue-400">
+            DISTRI<span className="text-orange-500 dark:text-orange-400">LUNA</span>
+          </span>
         </Link>
         <nav className="hidden md:flex md:gap-6 lg:gap-10">
           <Link
             href="/categorias/equipos-electronicos"
-            className="text-sm font-medium transition-colors hover:text-foreground/80"
+            className="text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-orange-500 dark:hover:text-orange-400"
           >
             Equipos Electrónicos
           </Link>
           <Link
             href="/categorias/herramientas-manuales"
-            className="text-sm font-medium transition-colors hover:text-foreground/80"
+            className="text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-orange-500 dark:hover:text-orange-400"
           >
             Herramientas Manuales
           </Link>
           <Link
             href="/categorias/accesorios-consumibles"
-            className="text-sm font-medium transition-colors hover:text-foreground/80"
+            className="text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-orange-500 dark:hover:text-orange-400"
           >
             Accesorios y Consumibles
           </Link>
@@ -56,10 +60,6 @@ export function SiteHeader() {
               />
             </div>
           </div>
-          <Button variant="outline" size="icon">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Carrito</span>
-          </Button>
           <ThemeToggle />
         </div>
       </div>

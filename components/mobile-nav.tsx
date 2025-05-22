@@ -15,28 +15,28 @@ export function MobileNav() {
           <div className="flex flex-col gap-2 p-2">
             <Link
               href="/"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-blue-600 dark:text-blue-400 transition-all hover:text-orange-500 dark:hover:text-orange-400"
             >
               <Home className="h-5 w-5" />
               <span>Inicio</span>
             </Link>
             <Link
               href="/categorias/equipos-electronicos"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-blue-600 dark:text-blue-400 transition-all hover:text-orange-500 dark:hover:text-orange-400"
             >
               <Drill className="h-5 w-5" />
               <span>Equipos Electrónicos</span>
             </Link>
             <Link
               href="/categorias/herramientas-manuales"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-blue-600 dark:text-blue-400 transition-all hover:text-orange-500 dark:hover:text-orange-400"
             >
               <Screwdriver className="h-5 w-5" />
               <span>Herramientas Manuales</span>
             </Link>
             <Link
               href="/categorias/accesorios-consumibles"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-blue-600 dark:text-blue-400 transition-all hover:text-orange-500 dark:hover:text-orange-400"
             >
               <Wrench className="h-5 w-5" />
               <span>Accesorios y Consumibles</span>

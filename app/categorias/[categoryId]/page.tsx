@@ -23,11 +23,16 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/" className="text-sm text-muted-foreground hover:underline">
+        <Link
+          href="/"
+          className="text-sm text-blue-600 dark:text-blue-400 hover:text-orange-500 dark:hover:text-orange-400 hover:underline"
+        >
           ← Volver a categorías
         </Link>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">{category.title}</h1>
-        <p className="mt-2 text-lg text-muted-foreground">{category.description}</p>
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-blue-600 dark:text-blue-400 sm:text-4xl">
+          {category.title}
+        </h1>
+        <p className="mt-2 text-lg text-orange-600 dark:text-orange-400">{category.description}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -54,10 +59,12 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                   {product.variants.length} {product.variants.length === 1 ? "variante" : "variantes"}
                 </div>
               </CardContent>
-              <CardFooter className="bg-muted/50 p-4">
+              <CardFooter className="bg-blue-50 dark:bg-blue-950/40 p-4">
                 <div className="flex w-full items-center justify-between">
-                  <span className="font-semibold">Desde ${product.price.toLocaleString()}</span>
-                  <span className="text-sm text-muted-foreground">Ver detalles →</span>
+                  <span className="font-semibold text-blue-600 dark:text-blue-400">
+                    Desde ${product.price.toLocaleString()}
+                  </span>
+                  <span className="text-sm text-orange-500 dark:text-orange-400">Ver detalles →</span>
                 </div>
               </CardFooter>
             </Card>

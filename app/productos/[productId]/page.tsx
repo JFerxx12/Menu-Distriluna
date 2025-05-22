@@ -1,9 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { ShoppingCart } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -26,7 +23,10 @@ export default function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href={`/categorias/${product.categoryId}`} className="text-sm text-muted-foreground hover:underline">
+        <Link
+          href={`/categorias/${product.categoryId}`}
+          className="text-sm text-blue-600 dark:text-blue-400 hover:text-orange-500 dark:hover:text-orange-400 hover:underline"
+        >
           ← Volver a {product.categoryName}
         </Link>
       </div>
@@ -46,12 +46,14 @@ export default function ProductPage({ params }: ProductPageProps) {
           <Badge variant="outline" className="w-fit">
             {product.brand}
           </Badge>
-          <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="text-xl font-semibold">Desde ${product.price.toLocaleString()}</p>
+          <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400">{product.name}</h1>
+          <p className="text-xl font-semibold text-orange-500 dark:text-orange-400">
+            Desde ${product.price.toLocaleString()}
+          </p>
           <p className="text-muted-foreground">{product.description}</p>
 
           <div className="mt-4">
-            <h2 className="mb-2 text-lg font-semibold">Variantes disponibles</h2>
+            <h2 className="mb-2 text-lg font-semibold text-blue-600 dark:text-blue-400">Variantes disponibles</h2>
             <Tabs defaultValue={product.variants[0].id.toString()}>
               <TabsList className="w-full justify-start">
                 {product.variants.map((variant) => (
@@ -85,10 +87,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                             ))}
                           </ul>
                         </div>
-                        <Button className="mt-2">
-                          <ShoppingCart className="mr-2 h-4 w-4" />
-                          Añadir al carrito
-                        </Button>
+                        <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-md text-blue-600 dark:text-blue-400 text-sm">
+                          Para consultar disponibilidad y precios, por favor contacte con nuestro equipo de ventas.
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
