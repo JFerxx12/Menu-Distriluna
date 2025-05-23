@@ -1,35 +1,59 @@
 import Link from "next/link"
-import { Drill, Wrench, WrenchIcon as Screwdriver } from "lucide-react"
+import { Drill, Wrench, Plug, Paintbrush, Hammer } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Home() {
   const categories = [
-    {
-      id: "equipos-electronicos",
-      title: "Equipos Electrónicos",
-      description: "Taladros, sierras eléctricas y más",
-      icon: <Drill className="h-8 w-8" />,
-      color: "bg-blue-100 dark:bg-blue-900/40",
-      textColor: "text-blue-600 dark:text-blue-300",
-    },
-    {
-      id: "herramientas-manuales",
-      title: "Herramientas Manuales",
-      description: "Destornilladores, alicates y llaves",
-      icon: <Screwdriver className="h-8 w-8" />,
-      color: "bg-orange-100 dark:bg-orange-900/40",
-      textColor: "text-orange-600 dark:text-orange-300",
-    },
-    {
-      id: "accesorios-consumibles",
-      title: "Accesorios y Consumibles",
-      description: "Tornillos, chasos, clavos y boquillas",
-      icon: <Wrench className="h-8 w-8" />,
-      color: "bg-blue-50 dark:bg-blue-950/40",
-      textColor: "text-blue-500 dark:text-blue-200",
-    },
-  ]
+  {
+    id: "materiales-construccion",
+    title: "Materiales de Construcción",
+    description: "Cemento, ladrillos y más",
+    icon: <Drill className="h-8 w-8" />,
+    color: "bg-blue-100 dark:bg-blue-900/40",
+    textColor: "text-blue-600 dark:text-blue-300",
+  },
+  {
+    id: "pinturas-accesorios",
+    title: "Pinturas y Accesorios",
+    description: "Pinturas, brochas y rodillos",
+    icon: <Paintbrush className="h-8 w-8" />,  // mejor un pincel para pinturas
+    color: "bg-orange-100 dark:bg-orange-900/40",
+    textColor: "text-orange-600 dark:text-orange-300",
+  },
+  {
+    id: "electrica",
+    title: "Eléctrica",
+    description: "Cables, conectores y más",
+    icon: <Plug className="h-8 w-8" />,  // icono enchufe o similar para eléctrica
+    color: "bg-blue-100 dark:bg-blue-900/40",
+    textColor: "text-blue-600 dark:text-blue-300",
+  },
+  {
+    id: "cerraderia",
+    title: "Cerrajería",
+    description: "Candados, bisagras y cadenas",
+    icon: <Wrench className="h-8 w-8" />,  // aquí sí un wrench para llaves y cerrajería
+    color: "bg-orange-100 dark:bg-orange-900/40",
+    textColor: "text-orange-600 dark:text-orange-300",
+  },
+  {
+    id: "herramientas-electricas",
+    title: "Herramientas Eléctricas",
+    description: "Taladros, pulidoras y más",
+    icon: <Drill className="h-8 w-8" />,  // perfecto usar drill aquí
+    color: "bg-blue-100 dark:bg-blue-900/40",
+    textColor: "text-blue-600 dark:text-blue-300",
+  },
+  {
+    id: "herramientas-mano",
+    title: "Herramientas de Mano",
+    description: "Destornilladores, alicates y más",
+    icon: <Hammer className="h-8 w-8" />,
+    color: "bg-orange-100 dark:bg-orange-900/40",
+    textColor: "text-orange-600 dark:text-orange-300",
+  },
+];
 
   return (
     <div className="container mx-auto px-4 py-8">

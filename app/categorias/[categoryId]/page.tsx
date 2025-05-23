@@ -12,8 +12,9 @@ interface CategoryPageProps {
   }
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const { categoryId } = params
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const resolvedParams = await params
+  const { categoryId } = resolvedParams
   const { category, products } = getProductsByCategory(categoryId)
 
   if (!category) {
