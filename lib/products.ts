@@ -600,7 +600,7 @@ const products: Product[] = [
         "Espesor: 3 mm",
         "Largo: 6 metros",
       ],
-      image: "/images/tubo cr.png",
+      image: "/images/tuboacero2.png",
     },
     {
       id: 2,
