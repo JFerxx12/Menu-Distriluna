@@ -56,7 +56,8 @@ export default function Home() {
 ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="w-full max-w-screen-sm mx-auto px-4 py-8">
+
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold tracking-tight text-blue-600 dark:text-blue-400 sm:text-4xl md:text-5xl">
           Productos Distriluna
@@ -68,12 +69,12 @@ export default function Home() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (
-          <Link key={category.id} href={`/categorias/${category.id}`} className="transition-transform hover:scale-105">
-            <Card className="h-full overflow-hidden">
+          <Link key={category.id} href={`/categorias/${category.id}`} className="transition-transform">
+            <Card className="h-full">
               <CardHeader className={`${category.color} ${category.textColor}`}>
                 <div className="flex items-center gap-3">
                   {category.icon}
-                  <CardTitle>{category.title}</CardTitle>
+                  <CardTitle className="text-base sm:text-lg break-words">{category.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
