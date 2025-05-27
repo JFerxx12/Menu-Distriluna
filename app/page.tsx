@@ -8,7 +8,7 @@ export default function Home() {
   {
     id: "materiales-construccion",
     title: "Materiales de Construcción",
-    description: "Cemento, ladrillos y más",
+    description: "Cemento, varillas, perfiles y más",
     icon: <Drill className="h-8 w-8" />,
     color: "bg-blue-100 dark:bg-blue-900/40",
     textColor: "text-blue-600 dark:text-blue-300",

@@ -1,3 +1,6 @@
+"use client"
+
+import { use } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -5,20 +8,24 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { getProductById } from "@/lib/products"
+import { useState } from "react"
 
 interface ProductPageProps {
-  params: {
-    productId: string
-  }
+  params: Promise<{ productId: string }>
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const { productId } = params
+  // Usar `use()` para resolver los parámetros
+  const { productId } = use(params)
+
   const product = getProductById(productId)
 
   if (!product) {
     notFound()
   }
+
+  const [selectedVariantId, setSelectedVariantId] = useState(product.variants[0].id)
+  const selectedVariant = product.variants.find((v) => v.id === selectedVariantId)
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -34,7 +41,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       <div className="grid gap-8 md:grid-cols-2">
         <div className="overflow-hidden rounded-lg border">
           <Image
-            src={product.image || "/placeholder.svg"}
+            src={selectedVariant?.image || product.image || "/placeholder.svg"}
             alt={product.name}
             width={600}
             height={600}
@@ -47,14 +54,12 @@ export default function ProductPage({ params }: ProductPageProps) {
             {product.brand}
           </Badge>
           <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400">{product.name}</h1>
-          <p className="text-xl font-semibold text-orange-500 dark:text-orange-400">
-            Desde ${product.price.toLocaleString()}
-          </p>
+
           <p className="text-muted-foreground">{product.description}</p>
 
           <div className="mt-4">
             <h2 className="mb-2 text-lg font-semibold text-blue-600 dark:text-blue-400">Variantes disponibles</h2>
-            <Tabs defaultValue={product.variants[0].id.toString()}>
+            <Tabs value={selectedVariantId.toString()} onValueChange={(value) => setSelectedVariantId(Number(value))}>
               <TabsList className="w-full justify-start">
                 {product.variants.map((variant) => (
                   <TabsTrigger key={variant.id} value={variant.id.toString()}>

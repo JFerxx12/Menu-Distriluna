@@ -62,9 +62,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               </CardContent>
               <CardFooter className="bg-blue-50 dark:bg-blue-950/40 p-4">
                 <div className="flex w-full items-center justify-between">
-                  <span className="font-semibold text-blue-600 dark:text-blue-400">
-                    Desde ${product.price.toLocaleString()}
-                  </span>
+                  
                   <span className="text-sm text-orange-500 dark:text-orange-400">Ver detalles →</span>
                 </div>
               </CardFooter>
