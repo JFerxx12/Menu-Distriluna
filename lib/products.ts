@@ -591,8 +591,8 @@ const products: Product[] = [
     {
       id: 1,
       size: "100x100",
-      price: 155000,
-      reference: "Cod-00028",
+      price: 203730,
+      reference: "Cod-106317",
       specifications: [
         "Tubo cuadrado en acero",
         "Usado en estructuras pesadas",
@@ -605,8 +605,8 @@ const products: Product[] = [
     {
       id: 2,
       size: "38x76 CR",
-      price: 127000,
-      reference: "Cod-00029",
+      price: 60230,
+      reference: "Cod-501980",
       specifications: [
         "Tubo rectangular laminado en frío",
         "Preciso y con buen acabado",
