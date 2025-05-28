@@ -38,7 +38,7 @@ export function SiteHeader() {
         {/* Nav visible solo en pantallas grandes */}
         <nav className="hidden md:flex gap-6 items-center overflow-x-auto scrollbar-thin max-w-[60%]">
           <NavLink href="/categorias/materiales-construccion" text="Materiales de Construcción" />
-          <NavLink href="/categorias/herramientas-mano" text="Herramientas de Mano" />
+          <NavLink href="/categorias/herramientas-mano" text="Herramientas manuales" />
           <NavLink href="/categorias/cerraderia" text="Cerrajería" />
           <NavLink href="/categorias/electrica" text="Eléctrica" />
           <NavLink href="/categorias/pinturas-accesorios" text="Pinturas y Accesorios" />

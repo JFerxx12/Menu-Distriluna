@@ -52,7 +52,7 @@ const categories: Category[] = [
   },
   {
     id: "herramientas-mano",
-    title: "Herramientas de Mano",
+    title: "Herramientas manuales",
     description: "Destornilladores, alicates y más",
   },
 ]
@@ -73,7 +73,6 @@ const products: Product[] = [
         price: 699.17,
         reference: "Cod-00017",
         specifications: [
-          "Existencia: 10",
           "Tamaño pequeño",
           "Ideal para detalles finos",
         ],
@@ -85,7 +84,7 @@ const products: Product[] = [
         price: 807.58,
         reference: "Cod-00018",
         specifications: [
-          "Existencia: 2",
+          
           "Tamaño medio",
           "Trazos amplios con precisión",
           
@@ -110,7 +109,6 @@ const products: Product[] = [
         price: 4307,
         reference: "Cod-00-2212",
         specifications: [
-          "Existencia: 369",
           "Dos conductores de cobre",
           "Tensión: 300v",
           "Color blanco",
@@ -124,7 +122,6 @@ const products: Product[] = [
         price: 2564,
         reference: "Cod-00-2214",
         specifications: [
-          "Existencia: 698",
           "Dos conductores de cobre",
           "Tensión: 150v",
           "Color blanco",
@@ -140,7 +137,7 @@ const products: Product[] = [
     categoryName: "Materiales de Construcción",
     name: "Cemento Gris de uso General",
     brand: "CEMEX-HOLCIM",
-    description: "Mezcla en polvo de uso estructural, para obras civiles, mampostería y concreto.",
+    description: "Mezcla en polvo de uso general, para obras civiles, mampostería y concreto.",
     image: "/images/cemen-cemex.png",
     variants: [
       {
@@ -149,9 +146,8 @@ const products: Product[] = [
         price: 24926,
         reference: "Cod-101",
         specifications: [
-          "Existencia: 51",
           "Peso: 50 kg",
-          "Uso estructural",
+          "Uso general",
           "Ideal para obras civiles y mampostería",
         ],
         image: "/images/cemen-cemex.png",
@@ -162,7 +158,6 @@ const products: Product[] = [
         price: 27718,
         reference: "Cod-106",
         specifications: [
-          "Existencia: 0",
           "Peso: 50 kg",
           "Alta resistencia",
           "Uso en estructuras y obra gris",
@@ -187,7 +182,6 @@ const products: Product[] = [
         price: 5044,
         reference: "VARILLA-6MM-6ML",
         specifications: [
-          "Existencia: 62",
           "Peso: 1.33 kg",
           "Acero corrugado grueso",
           "Refuerzo para concreto",
@@ -200,7 +194,6 @@ const products: Product[] = [
         price: 2331,
         reference: "VARILLA-4MM-6ML",
         specifications: [
-           "Existencia: 52",
           "Peso: 0.59 kg",
           "Acero corrugado delgado",
           "Uso en refuerzos secundarios",
@@ -221,11 +214,10 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "THORSEN-5/16x6”",
+        size: "THORSEN",
         price: 5714,
         reference: "Cod-220119",
         specifications: [
-           "Existencia: 1",
           "Punta Phillips",
           "Tamaño mediano",
           "Marca THORSEN",
@@ -235,11 +227,10 @@ const products: Product[] = [
       },
        {
         id: 2,
-        size: "STANLEY-PHILLIPS-3X6”",
+        size: "STANLEY",
         price: 7228,
         reference: "Cod-69148",
         specifications: [
-          "Existencia: 4",
           "Punta Phillips",
           "Uso profesional",
           "Marca STANLEY",
@@ -261,7 +252,7 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "SAPOLIN ACRILICO AZUL",
+        size: "Acrilico azul",
         price: 259344,
         reference: "Cod-34005A58",
         specifications: [
@@ -274,7 +265,7 @@ const products: Product[] = [
       },
       {
         id: 2,
-        size: "SAPOLIN ACRILICO ROJO",
+        size: "Acrilico rojo",
         price: 229287,
         reference: "Cod-34004A58",
         specifications: [
@@ -300,7 +291,7 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "SAPOLIN VINILO BLANCO",
+        size: "VINILO BLANCO",
         price: 138065,
         reference: "Cod-34010C58",
         specifications: [
@@ -312,7 +303,7 @@ const products: Product[] = [
       },
        {
         id: 2,
-        size: "SAPOLIN VINILO BLANCO HUESO",
+        size: "VINILO BLANCO HUESO",
         price: 140272,
         reference: "Cod-34013C58",
         specifications: [
@@ -336,7 +327,7 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "Zinca PL 2x2 1.6mm",
+        size: "Zinca PL 2x2",
         price: 802,
         reference: "Cod-52580M0005",
         specifications: [
@@ -348,7 +339,7 @@ const products: Product[] = [
       },
        {
         id: 2,
-        size: " Dorad PL 2x3 1.6mm",
+        size: " Dorad PL 2x3",
         price: 890,
         reference: "Cod-52580M0006",
         specifications: [
@@ -375,7 +366,6 @@ const products: Product[] = [
         price: 31746,
         reference: "Cod-84-221",
         specifications: [
-          "Existencia: 2",
           "Marca: STANLEY",
           "Fuerte y resistente",
           "Uso profesional",
@@ -388,7 +378,6 @@ const products: Product[] = [
         price: 20328,
         reference: "Cod-T1312450010",
         specifications: [
-          "Existencia: 10",
           "Marca: HERRAGRO",
           "Versión nacional",
           "Corte grueso",
@@ -408,11 +397,10 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "DeWALT 4.1/2” 900W",
+        size: "DeWALT 900W",
         price: 297000,
         reference: "Cod-DWE4120",
         specifications: [
-          "Existencia: 2",
           "Marca: DeWALT",
           "12000 rpm",
           "Gatillo profesional",
@@ -421,11 +409,10 @@ const products: Product[] = [
       },
       {
         id: 2,
-        size: "SIEFKEN 4.1/2” 1000W",
+        size: "SIEFKEN 1000W",
         price: 302622,
         reference: "Cod-GD1020",
         specifications: [
-          "Existencia: 0",
           "Marca: SIEFKEN",
           "11000 rpm",
           "Uso profesional o doméstico",
@@ -445,11 +432,10 @@ const products: Product[] = [
     variants: [
       {
         id: 1,
-        size: "FURIUS 1/2” 21V",
+        size: "FURIUS 21V",
         price: 215706,
         reference: "Cod-FCD21",
         specifications: [
-          "Existencia: 1",
           "Marca: FURIUS",
           "Taladro sin cable",
           "Función percutora",
@@ -458,11 +444,10 @@ const products: Product[] = [
       },
       {
         id: 2,
-        size: "1/2” 20V 2BAT",
+        size: "2BAT 20V ",
         price: 347829,
         reference: "Cod-XID20",
         specifications: [
-          "Existencia: 3",
           "Marca: ELITE",
           "Incluye 2 baterías",
           "Uso profesional",
@@ -486,7 +471,6 @@ const products: Product[] = [
         price: 19626,
         reference: "Cod-ML4680DBLK",
         specifications: [
-          "Existencia: 4",
           "Marca: TC",
           "Homologado TSA",
           "Ideal para viajes",
@@ -499,7 +483,6 @@ const products: Product[] = [
         price: 13468,
         reference: "Cod-ML646T",
         specifications: [
-          "Existencia: 18",
           "Marca: GATO",
           "Pequeño y compacto",
           "Ideal para lockers",
@@ -523,7 +506,6 @@ const products: Product[] = [
         price: 908,
         reference: "Cod-40750",
         specifications: [
-          "Existencia: 102",
           "Trenzado flexible",
           "6x7 hilos",
           "Uso estructural y sujeción",
@@ -548,7 +530,6 @@ const products: Product[] = [
         price: 7904,
         reference: "Cod-426-700",
         specifications: [
-          "Existencia: 45",
           "Anticorrosiva",
           "Ideal para amarres y cierres",
         ],
@@ -571,7 +552,6 @@ const products: Product[] = [
         price: 6114,
         reference: "Cod-EEC-D-020",
         specifications: [
-          "Existencia: 30",
           "Cobre de alta capacidad",
           "Ideal para cargas pesadas",
         ],

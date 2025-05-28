@@ -21,7 +21,7 @@ export function MobileNav() {
         <nav className="flex flex-col gap-1">
           <NavLink href="/" icon={<Home />} text="Inicio" />
           <NavLink href="/categorias/materiales-construccion" icon={<Drill />} text="Materiales de Construcción" />
-          <NavLink href="/categorias/herramientas-mano" icon={<Hammer />} text="Herramientas de Mano" />
+          <NavLink href="/categorias/herramientas-mano" icon={<Hammer />} text="Herramientas manuales" />
           <NavLink href="/categorias/cerraderia" icon={<Wrench />} text="Cerrajería" />
           <NavLink href="/categorias/electrica" icon={<Plug />} text="Eléctrica" />
           <NavLink href="/categorias/pinturas-accesorios" icon={<Paintbrush />} text="Pinturas y Accesorios" />

@@ -47,7 +47,7 @@ export default function Home() {
   },
   {
     id: "herramientas-mano",
-    title: "Herramientas de Mano",
+    title: "Herramientas manuales",
     description: "Destornilladores, alicates y más",
     icon: <Hammer className="h-8 w-8" />,
     color: "bg-orange-100 dark:bg-orange-900/40",
